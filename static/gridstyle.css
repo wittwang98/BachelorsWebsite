@@ -1,0 +1,220 @@
+body{
+    margin: 0px;
+    background-color: whitesmoke;
+}
+
+div{
+    /* outline: solid 1px black; */
+}
+
+h2{
+    margin-top: 0px;
+    padding: 5px;
+}
+
+#language{
+    position: absolute;
+    right: 30px;
+    top: 0;
+    font-size: 20px;
+    color:darkgray;
+    padding-right: 10px;
+}
+#language > img, #language > p{
+    display: inline-block;
+    padding-left: 10px;
+}
+
+#language:hover{
+    background-color: #dddddd55;
+    color: black;
+}
+
+
+.header{
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". . ."
+    ". logo ."
+    ". menu ."
+    ". . .";
+    background-color: transparent;
+}
+
+#backgroundImage{
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+#backgroundImageBlur{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 70vh;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(5px);
+}
+
+#menu {
+    height: 1fr;
+    display: grid;
+    background-color: #dddddd77;
+    grid-area: menu;
+    grid-template-columns: min-content;
+    justify-content: center;
+    align-content: center;
+}
+
+#menu > p{
+    margin: 0px;
+    font-size: 20px;
+    color: black;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+#menu > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+#menu > p:hover{
+    text-decoration: underline;
+    vertical-align: auto;
+}
+
+#logo
+{
+    grid-area: logo;
+    min-height: 1fr;
+    display: grid;
+    align-content: center;
+}
+
+#logo > img{
+    max-width: 100%;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    row-gap: 10px;
+    grid-template-areas:
+        ". project ."
+        ". furniture ."
+        ". reports ."
+        ". about .";
+}
+
+#project{
+    margin-top: 80px;
+    grid-area: project;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-areas:
+        ". projectHeader ."
+        ". projectImage ."
+        ". projectText . "
+        ". projectNavigation .";
+    background-color: white;
+}
+
+#project > div > img{
+    max-width: 100%;
+}
+
+#furniture{
+    grid-area: furniture;
+}
+
+#reports{
+    grid-area: reports;
+}
+
+#about{
+    grid-area: about;
+}
+
+#projectHeader{
+    grid-area: projectHeader;
+    text-align: center;
+}
+
+#projectImage{
+    grid-area: projectImage;
+}
+#projectImage > h2{
+    text-align: center;
+}
+
+#projectText{
+    grid-area: projectText;
+}
+
+#projectNavigation{
+    grid-area: projectNavigation;
+    text-align: center;
+}
+
+#projectNavigation > div{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 100px;
+    outline: none !important;
+    padding: 3px;
+    margin: 5px;
+}
+#projectNavigation > div:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 1200px){
+    
+    .header{
+
+        grid-template-columns: 1fr repeat(3, 400px) 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: ". . . . ."
+        ". logo menu menu ."
+        ". . . . ."
+        ". . . . .";
+        column-gap: 10px;
+    }
+
+    #menu {
+        grid-template-columns: min-content min-content min-content min-content;
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 20px;
+        grid-template-areas:
+            ". project project project ."
+            ". furniture furniture furniture ."
+            ". reports reports reports ."
+            ". about about about .";
+    }
+
+    #project{
+        grid-area: project;
+        display: grid;
+        grid-template-columns: 20px repeat(3, 1fr) 20px;
+        grid-template-areas: 
+            ". projectHeader projectHeader projectHeader ."
+            ". projectImage projectText projectText ."
+            ". projectNavigation projectNavigation projectNavigation .";
+    }
+
+}
