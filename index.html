@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="header">
-        <div id="language"> <img src="static/united-kingdom.png" alt="" height="30px"><p>English</p></div>
+        <div id="language"></div>
         <img id="backgroundImage" src="static/temp_header.jpg" alt="">
         <div id="backgroundImageBlur"></div>
         <div id="logo">
@@ -34,18 +34,18 @@
         <div id="project">
             <h1 id="projectHeader">Pedagogiska möbler</h1>
             <div id="projectImage">
-                <h2>
-                    Uppdraget
+                <h2 id="projectTitle">
+                    
                 </h2>
-                <img src="static/Hivemind classroom.PNG" alt="">
+                <img id="projectImageImage" src="" alt="">
             </div>
-            <p id="projectText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iure magnam aut nemo, totam iste quos laboriosam, impedit, officiis sequi voluptates ipsa error quae eos aperiam distinctio corrupti quis nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere dolore quod velit inventore libero rem quo delectus optio sint asperiores nemo sit a illum voluptatem quam vitae, debitis illo.</p>
+            <p id="projectText"></p>
             <div id="projectNavigation">
-                <div id="projectNavigation1"></div>
-                <div id="projectNavigation2"></div>
-                <div id="projectNavigation3"></div>
-                <div id="projectNavigation4"></div>
-                <div id="projectNavigation5"></div>
+                <div id="projectNavigation1" class="circle"></div>
+                <div id="projectNavigation2" class="circle"></div>
+                <div id="projectNavigation3" class="circle"></div>
+                <div id="projectNavigation4" class="circle"></div>
+                <div id="projectNavigation5" class="circle"></div>
             </div>
 
         </div>
@@ -68,5 +68,72 @@
     <div>
 
     </div> -->
+    <script>
+
+        
+        
+        data = null
+        lang_is_sv = window.localStorage.getItem('lang') === "true" ? true : false
+        selectedCircle = 1
+        lang = document.getElementById("language")
+
+        if (window.localStorage.getItem('lang') === NaN) {
+            console.log("NININ")
+            window.localStorage.setItem('lang', lang_is_sv.toString())
+        }
+        console.log(window.localStorage.getItem('lang'))
+
+        start = async ()=>{
+            const res = await fetch("data.json")
+            data = await res.json()
+
+            changeCard(selectedCircle)
+            lang.innerHTML = `<img src="static/${lang_is_sv?"united-kingdom":"sweden"}.png" alt="" height="30px"><p>${lang_is_sv?"Engligh":"Svenska"}</p>`
+
+            lang.addEventListener("click", (e)=>{
+                lang_is_sv = !lang_is_sv
+                window.localStorage.setItem('lang', lang_is_sv.toString())
+                changeCard(selectedCircle)
+                lang.innerHTML = `<img src="static/${lang_is_sv?"united-kingdom":"sweden"}.png" alt="" height="30px"><p>${lang_is_sv?"Engligh":"Svenska"}</p>`
+            })
+
+            setInterval(()=>{
+                changeCard(((selectedCircle)%5)+1)
+            }, 2000)
+        }
+
+        clearCircles = ()=>{
+            Array.from(document.getElementsByClassName("circle")).forEach(element => {
+                element.style.backgroundColor = "transparent"
+            })
+        }
+
+        changeCard = (number)=>{
+            console.log(number)
+            clearCircles()
+            selectedCircle = number
+            document.getElementById(`projectNavigation${selectedCircle}`).style.backgroundColor = "grey"
+            document.getElementById("projectTitle").innerHTML = data[lang_is_sv?"sv":"en"][selectedCircle-1].title
+            document.getElementById("projectImageImage").src = data[lang_is_sv?"sv":"en"][selectedCircle-1].img
+            document.getElementById("projectText").innerHTML = data[lang_is_sv?"sv":"en"][selectedCircle-1].desc
+        }
+
+        Array.from(document.getElementsByClassName("circle")).forEach(element => {
+            element.addEventListener("click", (e)=>{
+                changeCard(parseInt(e.target.id.slice(-1)))
+            })
+        })
+
+        start()
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
