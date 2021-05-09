@@ -4,7 +4,7 @@ body{
 }
 
 div{
-    /* outline: solid 1px black; */
+    outline: solid 1px black;
 }
 
 h2{
@@ -29,7 +29,6 @@ h2{
     background-color: #dddddd55;
     color: black;
 }
-
 
 .header{
     height: 70vh;
@@ -130,10 +129,6 @@ h2{
     max-width: 100%;
 }
 
-#furniture{
-    grid-area: furniture;
-}
-
 #reports{
     grid-area: reports;
 }
@@ -150,6 +145,7 @@ h2{
 #projectImage{
     grid-area: projectImage;
 }
+
 #projectImage > h2{
     text-align: center;
 }
@@ -176,6 +172,48 @@ h2{
 #projectNavigation > div:hover{
     background-color: lightgray;
     cursor: pointer;
+}
+
+#furniture{
+    grid-area: furniture;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        ". furnitureHeadline ."
+        ". chair ."
+        ". desk ."
+        ". whiteboard ."
+        ". portable .";
+        background-color: chartreuse;
+}
+#furniture > div{
+    background-color: gray;
+}
+#furniture > div > img{
+    max-width: 100%;
+    max-height: 100%;
+    height: fill-content;
+}
+
+#furnitureHeadline{
+    grid-area: furnitureHeadline;
+}
+
+#chair{
+    grid-area: chair;
+}
+
+#desk{
+    grid-area: desk;
+}
+
+#whiteboard{
+    grid-area: whiteboard;
+}
+
+#portable{
+    grid-area: portable;
 }
 
 
@@ -208,7 +246,6 @@ h2{
     }
 
     #project{
-        grid-area: project;
         display: grid;
         grid-template-columns: 20px repeat(3, 1fr) 20px;
         grid-template-areas: 
@@ -217,4 +254,15 @@ h2{
             ". projectNavigation projectNavigation projectNavigation .";
     }
 
+    #furniture{
+        display: grid;
+        grid-template-columns: 20px repeat(4, 1fr) 20px;
+        grid-template-rows: repeat(1fr);
+        grid-template-areas: 
+            ". . furnitureHeadline . ."
+            ". chair desk whiteboard portable ."
+            ". chair desk whiteboard portable ."
+            ". chair desk whiteboard portable ."
+            ". chair desk whiteboard portable .";
+    }
 }
