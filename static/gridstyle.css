@@ -4,7 +4,7 @@ body{
 }
 
 div{
-    outline: solid 1px black;
+    /* outline: solid 1px black; */
 }
 
 h2{
@@ -113,7 +113,7 @@ h2{
 }
 
 #project{
-    margin-top: 80px;
+    margin-top: 50px;
     grid-area: project;
     display: grid;
     grid-template-columns: 10px 1fr 10px;
@@ -175,31 +175,40 @@ h2{
 }
 
 #furniture{
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: white;
     grid-area: furniture;
     display: grid;
     grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, min-content);
     grid-template-areas: 
         ". furnitureHeadline ."
         ". chair ."
         ". desk ."
         ". whiteboard ."
         ". portable .";
-        background-color: chartreuse;
 }
+
 #furniture > div{
-    background-color: gray;
+    text-align: center;
 }
 #furniture > div > img{
     max-width: 100%;
     max-height: 100%;
-    height: fill-content;
+}
+
+#chair:hover, #desk:hover, #whiteboard:hover, #portable:hover{
+    cursor: pointer;
+    background-color: lightgray;
 }
 
 #furnitureHeadline{
     grid-area: furnitureHeadline;
+    text-align: center;
+    max-height: fit-content;
+    height: min-content;
 }
-
 #chair{
     grid-area: chair;
 }
@@ -216,6 +225,56 @@ h2{
     grid-area: portable;
 }
 
+#reports{
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: white;
+    grid-area: reports;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: repeat(5, min-content);
+    grid-template-areas: 
+        ". reportsHeadline ."
+        ". projectReport ."
+        ". pedagogicsReport ."
+        ". designReport ."
+        ". circularityReport .";
+}
+
+#reports > div{
+    text-align: center;
+}
+#reports > div > img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#projectReport:hover, #pedagogicsReport:hover, #designReport:hover, #circularityReport:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+#reportsHeadline{
+    grid-area: reportsHeadline;
+    text-align: center;
+    max-height: fit-content;
+    height: min-content;
+}
+#projectReport{
+    grid-area: projectReport;
+}
+
+#pedagogicsReport{
+    grid-area: pedagogicsReport;
+}
+
+#designReport{
+    grid-area: designReport;
+}
+
+#circularityReport{
+    grid-area: circularityReport;
+}
 
 @media only screen and (min-width: 1200px){
     
@@ -253,16 +312,28 @@ h2{
             ". projectImage projectText projectText ."
             ". projectNavigation projectNavigation projectNavigation .";
     }
-
+    
     #furniture{
-        display: grid;
-        grid-template-columns: 20px repeat(4, 1fr) 20px;
-        grid-template-rows: repeat(1fr);
+        grid-template-columns: 10px repeat(4, 1fr) 10px;
+        row-gap: 0px;
         grid-template-areas: 
-            ". . furnitureHeadline . ."
-            ". chair desk whiteboard portable ."
-            ". chair desk whiteboard portable ."
-            ". chair desk whiteboard portable ."
-            ". chair desk whiteboard portable .";
+            ". furnitureHeadline  furnitureHeadline furnitureHeadline furnitureHeadline ."
+            ".  chair desk whiteboard portable ."
+            ".  chair desk whiteboard portable ."
+            ".  chair desk whiteboard portable ."
+            ".  chair desk whiteboard portable .";
+        padding-bottom: 30px;
+    }
+
+    #reports{
+        grid-template-columns: 10px repeat(4, 1fr) 10px;
+        row-gap: 0px;
+        grid-template-areas: 
+            ". reportsHeadline  reportsHeadline reportsHeadline reportsHeadline ."
+            ".  projectReport pedagogicsReport designReport circularityReport ."
+            ".  projectReport pedagogicsReport designReport circularityReport ."
+            ".  projectReport pedagogicsReport designReport circularityReport ."
+            ".  projectReport pedagogicsReport designReport circularityReport .";
+        padding-bottom: 30px;
     }
 }
