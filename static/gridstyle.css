@@ -1,11 +1,16 @@
 body{
     margin: 0px;
-    background-color: green;
+    background-color: whitesmoke;
     font-family: sans-serif;
 }
 
+.boxshadow{
+    -webkit-box-shadow: -1px 1px 5px 1px rgba(0,0,0,0.43); 
+    box-shadow: -1px 1px 5px 1px rgba(0,0,0,0.20);
+    }
+
 div{
-    outline: solid 1px black;
+    /* outline: solid 1px black; */
 }
 
 h2{
@@ -98,7 +103,7 @@ h2{
     align-content: center;
 }
 
-#logo > img{
+#logo > a> img{
     max-width: 100%;
 }
 
@@ -408,7 +413,7 @@ h2{
 #productPage{
     row-gap: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 20px;
+    grid-template-columns: 20px 1fr 20px;
     grid-template-rows: repeat(3, min-content);
     grid-template-areas:
     ". presentation ."
@@ -450,6 +455,7 @@ h2{
 
 #productGallery{
     grid-area: productGallery;
+    background-color: white;
     row-gap: 20px;
     margin-top: 50px;
     text-align: center;
@@ -490,6 +496,12 @@ h2{
 
 #criterias{
     grid-area: criterias;
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+}
+#criterias > ul{
+    display: inline-block;
 }
 
 @media only screen and (min-width: 1200px){
@@ -593,25 +605,28 @@ h2{
     }
 
     #presentation{
+        padding: 30px;
         grid-area: presentation;
         display:grid;
         row-gap: 50px;
         column-gap: 20px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: min-content min-content;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: min-content min-content min-content;
         grid-template-areas:
-        ". productHeadline productHeadline productHeadline ."
-        ". classroomProductPicture classroomProductPicture aboutProduct ."
-        ". inShort inShort inShort .";
+        "productHeadline productHeadline productHeadline"
+        "classroomProductPicture classroomProductPicture aboutProduct"
+        "inShort inShort inShort";
     }
     #productGallery{
+        padding: 30px;
         grid-area: productGallery;
         row-gap: 20px;
+        column-gap: 20px;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, min-content);
         grid-template-areas:
-        ". productPicture1 productPicture2 productPicture3 ."
-        ". productPicture1Description productPicture2Description productPicture3Description .";
+        "productPicture1 productPicture2 productPicture3"
+        "productPicture1Description productPicture2Description productPicture3Description";
     }
 }
