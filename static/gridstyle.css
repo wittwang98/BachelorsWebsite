@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     background-color: whitesmoke;
+    font-family: sans-serif;
 }
 
 div{
@@ -104,7 +105,7 @@ h2{
 .content{
     display: grid;
     grid-template-columns: 10px 1fr 10px;
-    row-gap: 10px;
+    row-gap: 25px;
     grid-template-areas:
         ". project ."
         ". furniture ."
@@ -276,6 +277,134 @@ h2{
     grid-area: circularityReport;
 }
 
+#about{
+    column-gap: 10px;
+    row-gap: 20px;
+    background-color: white;
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 10px 1fr 1fr 10px;
+    grid-template-rows: repeat(6, min-content);
+    grid-template-areas: 
+        ". aboutHeadline aboutHeadline ."
+        ". groupPicture groupPicture ."
+        ". aboutText aboutText ."
+        ". people people ."
+        ". people people ."
+        ". people people .";
+}
+
+#people{
+    column-gap: 40px;
+    row-gap: 20px;
+    text-align: center;
+    display: grid;
+    grid-area: people;
+    grid-template-columns: 15px 1fr 1fr 15px;
+    grid-template-rows: repeat(6, min-content);
+    grid-template-areas: 
+        ". pedagogicsGroup pedagogicsGroup ."
+        ". amanda arvid ."
+        ". designGroup designGroup ."
+        ". harald agnes ."
+        ". circularityGroup circularityGroup ."
+        ". annika alma .";
+
+}
+
+#people > div >img{
+    border-radius: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#aboutHeadline{
+    grid-area: aboutHeadline;
+    text-align: center;
+    height: min-content;
+    max-height: fit-content;
+}
+
+#groupPicture{
+    grid-area: groupPicture;
+    margin: 0 auto;
+}
+
+#groupPicture > img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#aboutText{
+    grid-area: aboutText;
+    margin-bottom: 60px;
+}
+
+#pedagogicsGroup{
+    grid-area: pedagogicsGroup;
+}
+
+#amanda{
+    grid-area: amanda;
+}
+
+#arvid{
+    grid-area: arvid;
+}
+
+#designGroup{
+    grid-area: designGroup;
+}
+
+#harald{
+    grid-area: harald;
+}
+
+#agnes{
+    grid-area: agnes;
+}
+
+#circularityGroup{
+    grid-area: circularityGroup;
+}
+
+#annika{
+    grid-area: annika;
+}
+
+#alma{
+    grid-area: alma;
+}
+
+#footer{
+    padding: 10vh 0;
+    text-align: center;
+    display: grid;
+    margin-top: 25px;
+    background-color: white;
+    grid-template-rows: 20px repeat(3, 1fr) 20px;
+    grid-template-areas: 
+        "." 
+        "course"
+        "updated"
+        "contact"
+        ".";
+}
+#footer > div > p, #footer > div >h3{
+    margin-top: 0px;
+}
+
+#course{
+    grid-area: course;
+}
+#updated{
+    grid-area: updated;
+}
+#contact{
+    grid-area: contact;
+}
+
+
 @media only screen and (min-width: 1200px){
     
     .header{
@@ -335,5 +464,33 @@ h2{
             ".  projectReport pedagogicsReport designReport circularityReport ."
             ".  projectReport pedagogicsReport designReport circularityReport .";
         padding-bottom: 30px;
+    }
+    #about{
+        grid-template-rows: repeat(3, min-content);
+        grid-template-areas: 
+            ". aboutHeadline aboutHeadline ."
+            ". groupPicture aboutText ."
+            ". people people .";
+    }
+    
+    #people{
+        column-gap: 30px;
+        text-align: center;
+        display: grid;
+        grid-area: people;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: min-content 1fr;
+        grid-template-areas: 
+            " pedagogicsGroup pedagogicsGroup designGroup designGroup circularityGroup circularityGroup"
+            "amanda arvid harald agnes annika alma";
+    }
+
+    #footer{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 20px repeat(3, 1fr) 20px;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            ". course updated contact .";
     }
 }
