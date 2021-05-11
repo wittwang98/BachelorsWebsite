@@ -1,11 +1,48 @@
+:root{
+    --cardPadding: 30px;
+    --upperCardMargin: 50px;
+    --cardGap: 20px;
+}
+
 body{
     margin: 0px;
     background-color: whitesmoke;
     font-family: sans-serif;
+    cursor: default;
 }
+
+.boxshadow{
+    -webkit-box-shadow: -1px 1px 5px 1px rgba(0,0,0,0.2); 
+    box-shadow: -1px 1px 5px 1px rgba(0,0,0,0.20);
+    border-radius: 5px;
+    }
 
 div{
     /* outline: solid 1px black; */
+}
+
+p{
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button{
+    min-height: min-content;
+    min-width: min-content;
+    max-width: 60%;
+    display: inline-block;
+    background-color: gray;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.clickable{
+    text-decoration: none;
+}
+
+.clickable:hover{
+    cursor: pointer;
 }
 
 h2{
@@ -43,6 +80,8 @@ h2{
     ". menu ."
     ". . .";
     background-color: transparent;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.43); 
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.20);
 }
 
 #backgroundImage{
@@ -98,7 +137,7 @@ h2{
     align-content: center;
 }
 
-#logo > img{
+#logo > a> img{
     max-width: 100%;
 }
 
@@ -114,7 +153,7 @@ h2{
 }
 
 #project{
-    margin-top: 50px;
+    margin-top: var(--upperCardMargin);
     grid-area: project;
     display: grid;
     grid-template-columns: 10px 1fr 10px;
@@ -199,11 +238,6 @@ h2{
     max-height: 100%;
 }
 
-#chair:hover, #desk:hover, #whiteboard:hover, #portable:hover{
-    cursor: pointer;
-    background-color: lightgray;
-}
-
 #furnitureHeadline{
     grid-area: furnitureHeadline;
     text-align: center;
@@ -278,12 +312,12 @@ h2{
 }
 
 #about{
-    column-gap: 10px;
+    column-gap: 0px;
     row-gap: 20px;
     background-color: white;
     grid-area: about;
     display: grid;
-    grid-template-columns: 10px 1fr 1fr 10px;
+    grid-template-columns: 0px 1fr 1fr 0px;
     grid-template-rows: repeat(6, min-content);
     grid-template-areas: 
         ". aboutHeadline aboutHeadline ."
@@ -340,6 +374,10 @@ h2{
     margin-bottom: 60px;
 }
 
+.linktext{
+    text-align: center;
+}
+
 #pedagogicsGroup{
     grid-area: pedagogicsGroup;
 }
@@ -389,9 +427,15 @@ h2{
         "updated"
         "contact"
         ".";
+
+    -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.20);
 }
 #footer > div > p, #footer > div >h3{
-    margin-top: 0px;
+    margin-top: 10px;
+}
+#course > p, #updated > p{
+    text-align: center;
 }
 
 #course{
@@ -404,6 +448,177 @@ h2{
     grid-area: contact;
 }
 
+/*Product page styling*/
+#productPage{
+    row-gap: var(--cardGap);
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+        ". presentation ."
+        ". productGallery ."
+        ". criterias .";
+}
+
+#presentation{
+    row-gap: var(--cardGap);
+    background-color: white;
+    text-align: center;
+    margin-top: var(--upperCardMargin);
+    grid-area: presentation;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+        "productHeadline"
+        "classroomProductPicture" 
+        "aboutProduct"
+        "inShort";
+}
+
+#presentation > div > img{
+    max-width: 100%;
+    max-height: 100%;
+}
+#productHeadline{
+    grid-area: productHeadline;
+}
+#classroomProductPicture{
+    grid-area: classroomProductPicture;
+}
+#aboutProduct{
+    grid-area: aboutProduct;   
+}
+#inShort{
+    grid-area: inShort;
+}
+
+#productGallery{
+    grid-area: productGallery;
+    background-color: white;
+    row-gap: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, min-content);
+    grid-template-areas:
+        "productPicture1"
+        "productPicture1Description"
+        "productPicture2"
+        "productPicture2Description"
+        "productPicture3"
+        "productPicture3Description";
+}
+#productGallery > div >img{
+    max-width: 100%;
+    max-height: 100%;
+}
+#productPicture1{
+    grid-area: productPicture1;
+}
+#productPicture1Description{
+    grid-area: productPicture1Description;
+}
+#productPicture2{
+    grid-area: productPicture2;
+}
+#productPicture2Description{
+    grid-area: productPicture2Description;
+}
+
+#productPicture3{
+    grid-area: productPicture3;
+}
+#productPicture3Description{
+    grid-area: productPicture3Description;
+}
+
+#criterias{
+    grid-area: criterias;
+    background-color: white;
+    padding: var(--cardPadding);
+    text-align: center;
+}
+#criterias > ul{
+    display: inline-block;
+}
+
+/*Report page styling*/
+#report{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas:
+        ". start ."
+        ". aboutAuthors .";
+}
+
+#start{
+    margin-top: var(--upperCardMargin);
+    grid-area: start;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas: 
+        "reportHeadline"
+        "abstract"
+        "link";
+}
+
+#reportHeadline{
+    background-color: white;
+    grid-area: reportHeadline;
+}
+
+#abstract{
+    background-color: white;
+    grid-area: abstract;
+}
+
+#link{
+    grid-area: link;
+    text-align: center;
+}
+
+#aboutAuthors{
+    background-color: white;
+    grid-area: aboutAuthors;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas: 
+        "authorHeadline authorHeadline"
+        "author1 author2"
+        "comments comments";
+}
+
+#aboutAuthors > div > img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+#authorHeadline{
+    grid-area: authorHeadline;
+}
+
+#author1{
+    grid-area:author1;
+    text-align: center;
+}
+
+#author2{
+    grid-area:author2;
+    text-align: center;
+}
+
+#comments{
+    padding-top: 10px;
+    grid-area: comments;
+}
 
 @media only screen and (min-width: 1200px){
     
@@ -425,7 +640,7 @@ h2{
     .content{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        row-gap: 20px;
+        row-gap: var(--cardGap);
         grid-template-areas:
             ". project project project ."
             ". furniture furniture furniture ."
@@ -443,27 +658,27 @@ h2{
     }
     
     #furniture{
-        grid-template-columns: 10px repeat(4, 1fr) 10px;
+        padding: var(--cardPadding);
+        grid-template-columns: repeat(4, 1fr);
         row-gap: 0px;
         grid-template-areas: 
-            ". furnitureHeadline  furnitureHeadline furnitureHeadline furnitureHeadline ."
-            ".  chair desk whiteboard portable ."
-            ".  chair desk whiteboard portable ."
-            ".  chair desk whiteboard portable ."
-            ".  chair desk whiteboard portable .";
-        padding-bottom: 30px;
+            "furnitureHeadline  furnitureHeadline furnitureHeadline furnitureHeadline"
+            "chair desk whiteboard portable"
+            "chair desk whiteboard portable"
+            "chair desk whiteboard portable"
+            "chair desk whiteboard portable";
     }
 
     #reports{
-        grid-template-columns: 10px repeat(4, 1fr) 10px;
+        grid-template-columns: repeat(4, 1fr);
         row-gap: 0px;
         grid-template-areas: 
-            ". reportsHeadline  reportsHeadline reportsHeadline reportsHeadline ."
-            ".  projectReport pedagogicsReport designReport circularityReport ."
-            ".  projectReport pedagogicsReport designReport circularityReport ."
-            ".  projectReport pedagogicsReport designReport circularityReport ."
-            ".  projectReport pedagogicsReport designReport circularityReport .";
-        padding-bottom: 30px;
+            "reportsHeadline reportsHeadline reportsHeadline reportsHeadline"
+            "projectReport pedagogicsReport designReport circularityReport"
+            "projectReport pedagogicsReport designReport circularityReport"
+            "projectReport pedagogicsReport designReport circularityReport"
+            "projectReport pedagogicsReport designReport circularityReport";
+        padding: var(--cardPadding);
     }
     #about{
         grid-template-rows: repeat(3, min-content);
@@ -471,6 +686,8 @@ h2{
             ". aboutHeadline aboutHeadline ."
             ". groupPicture aboutText ."
             ". people people .";
+        padding: var(--cardPadding);
+        column-gap: var(--cardGap);
     }
     
     #people{
@@ -493,4 +710,61 @@ h2{
         grid-template-areas: 
             ". course updated contact .";
     }
+
+    /* Product Page Styling*/
+    #productPage{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, min-content);
+        grid-template-areas:
+            ". presentation presentation presentation ."
+            ". productGallery productGallery productGallery ."
+            ". criterias criterias criterias .";
+    }
+
+    #presentation{
+        padding: var(--cardPadding);
+        grid-area: presentation;
+        display:grid;
+        row-gap: 50px;
+        column-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: min-content min-content min-content;
+        grid-template-areas:
+            "productHeadline productHeadline productHeadline"
+            "classroomProductPicture classroomProductPicture aboutProduct"
+            "inShort inShort inShort";
+    }
+    #productGallery{
+        padding: var(--cardPadding);
+        grid-area: productGallery;
+        row-gap: 20px;
+        column-gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+            "productPicture1 productPicture2 productPicture3"
+            "productPicture1Description productPicture2Description productPicture3Description";
+    }
+    /*Report page styling*/
+    #report{
+        row-gap: 20px;
+        column-gap: 20px;
+        padding: var(--cardPadding);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+            ". start start start ."
+            ". aboutAuthors aboutAuthors aboutAuthors .";
+    }
+
+    #start{
+        padding: var(--cardPadding);
+    }
+    #aboutAuthors{
+        padding: var(--cardPadding);
+    }
+    
 }
