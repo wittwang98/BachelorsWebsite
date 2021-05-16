@@ -16,12 +16,16 @@ body{
     box-shadow: -1px 1px 5px 1px rgba(0,0,0,0.20);
     border-radius: 5px;
     }
+<<<<<<< HEAD
 /*
 p, h1, h2, h3{
     opacity: 0;
     transition: opacity 300ms;
 }
 */
+=======
+
+>>>>>>> parent of fa9fa10 (Finished)
 div{
     /* outline: solid 1px black; */
 }
@@ -139,19 +143,11 @@ h2{
     grid-area: logo;
     min-height: 1fr;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-        ". logoImage .";
     align-content: center;
 }
 
-#logo > a > img{
+#logo > a> img{
     max-width: 100%;
-    max-height: fit-content;
-}
-
-#logoImage{
-    grid-area: logoImage;
 }
 
 .content{
@@ -208,7 +204,6 @@ h2{
 }
 
 #projectNavigation{
-    opacity: 0; /*Temporarily disabled card swap*/
     grid-area: projectNavigation;
     text-align: center;
 }
@@ -649,15 +644,6 @@ h2{
 
     #menu {
         grid-template-columns: min-content min-content min-content min-content;
-    }
-
-    #logo
-    {
-        grid-area: logo;
-        min-height: 1fr;
-        display: inline-block;
-        align-content: center;
-        background-color: #dddddd77;
     }
 
     .content{
