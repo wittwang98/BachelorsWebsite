@@ -16,16 +16,12 @@ body{
     box-shadow: -1px 1px 5px 1px rgba(0,0,0,0.20);
     border-radius: 5px;
     }
-<<<<<<< Updated upstream
-
-=======
 /*
 p, h1, h2, h3{
     opacity: 0;
     transition: opacity 300ms;
 }
 */
->>>>>>> Stashed changes
 div{
     /* outline: solid 1px black; */
 }

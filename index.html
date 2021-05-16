@@ -8,26 +8,6 @@
 </head>
 <body>
     <div class="header">
-<<<<<<< Updated upstream
-        <div id="language"> <img src="static/united-kingdom.png" alt="" height="30px"><p>English</p></div>
-        <img id="backgroundImage" src="static/temp_header.jpg" alt="">
-        <div id="backgroundImageBlur"></div>
-        <div id="logo">
-            <a href="#"><img src="static/Hivemind.png" alt=""></a>
-        </div>
-        <div id="menu">
-            <p>
-                <a href="#project">| PROJEKTET</a>
-            </p>
-            <p>
-                <a href="#furniture">| PEDAGOGISKA MÖBLER</a>
-            </p>
-            <p>
-                <a href="#reports">| RAPPORTER</a>
-            </p>
-            <p>
-                <a href="#about">| OM OSS</a>
-=======
         <div id="language"> <img jsonImage="languageImage" src="" alt="" height="30px"><p json="language"></p></div>
         <img id="backgroundImage" src="static/temp_header.jpg" alt="">
         <div id="backgroundImageBlur"></div>
@@ -46,32 +26,20 @@
             </p>
             <p>
                 <a href="#about" json="aboutMenu"></a>
->>>>>>> Stashed changes
             </p>
 
         </div>
     </div>
     <div class="content">
         <div id="project" class="boxshadow">
-<<<<<<< Updated upstream
-            <h1 id="projectHeader">Projektet</h1>
-            <div id="projectImage">
-                <h2>
-                    Uppdraget
-=======
             <h1 id="projectHeader" json="projectHeader"></h1>
             <div id="projectImage">
                 <h2 json="cardHeadline">
                     
->>>>>>> Stashed changes
                 </h2>
                 <img src="static/Hivemind classroom.PNG" alt="">
             </div>
-<<<<<<< Updated upstream
-            <p id="projectText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iure magnam aut nemo, totam iste quos laboriosam, impedit, officiis sequi voluptates ipsa error quae eos aperiam distinctio corrupti quis nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere dolore quod velit inventore libero rem quo delectus optio sint asperiores nemo sit a illum voluptatem quam vitae, debitis illo.</p>
-=======
             <p id="projectText" json="projectText"></p>
->>>>>>> Stashed changes
             <div id="projectNavigation">
                 <div id="projectNavigation1"></div>
                 <div id="projectNavigation2"></div>
@@ -83,33 +51,6 @@
         </div>
         <div id="furniture" class="boxshadow">
             <div id="furnitureHeadline">
-<<<<<<< Updated upstream
-                <h1>Pedagogiska möbler</h1>
-            </div>
-            <div id="chair">
-                <h2 class="clickable">Stolen</h2>
-                <img class="clickable" src="static/NetChair 2.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable">Läs mer</div>
-            </div>
-            <div id="desk">
-                <h2 class="clickable">Skrivbordet</h2>
-                <img class="clickable" src="static/NetChair 2.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable">Läs mer</div>
-            </div>
-            <div id="whiteboard">
-                <h2 class="clickable">Whiteboard</h2>
-                <img class="clickable" src="static/NetChair 2.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable">Läs mer</div>
-            </div>
-            <div id="portable">
-                <h2 class="clickable">Portabel möbel</h2>
-                <img class="clickable" src="static/NetChair 2.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable">Läs mer</div>
-=======
                 <h1 json="furnitureHeadline"></h1>
             </div>
             <div onclick='toPage("/products.html", "chair")' id="chair">
@@ -135,41 +76,10 @@
                 <img class="clickable expand" src="static/NetChair 2.png" alt="">
                 <p json="portableText"></p>
                 <div class="button clickable" json="button"></div>
->>>>>>> Stashed changes
             </div>
         </div>
         <div id="reports" class="boxshadow">
             <div id="reportsHeadline">
-<<<<<<< Updated upstream
-                <h1>Rapporter</h1>
-            </div>
-            <div id="projectReport">
-                <h2 class="clickable">Projektrapport</h2>
-                <img class="clickable" src="static/position-papers.thumb.800.480.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable">Läs mer</div>
-            </div>
-
-            <div id="pedagogicsReport">
-                <h2 class="clickable">Teknik och pedagogik</h2>
-                <img class="clickable" src="static/position-papers.thumb.800.480.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable">Läs mer</div>
-            </div>
-
-            <div id="designReport">
-                <h2 class="clickable">Design</h2>
-                <img class="clickable" src="static/position-papers.thumb.800.480.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable">Läs mer</div>
-            </div>
-
-            <div id="circularityReport">
-                <h2 class="clickable">Cirkularitet</h2>
-                <img class="clickable" src="static/position-papers.thumb.800.480.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable">Läs mer</div>
-=======
                 <h1 json="reportsHeadline"></h1>
             </div>
             <div onclick='toPage("/reports.html", "projectReport")' id="projectReport">
@@ -198,38 +108,24 @@
                 <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
                 <p json="circularityReporText"></p>
                 <div json="button" class="button clickable"></div>
->>>>>>> Stashed changes
             </div>
 
         </div>
         <div id="about" class="boxshadow">
             <div id="aboutHeadline">
-<<<<<<< Updated upstream
-                <h1>
-                    Om oss
-=======
                 <h1 json="aboutHeadline">
                     
->>>>>>> Stashed changes
                 </h1>
             </div>
             <div id="groupPicture">
                 <img src="static/group-young-people-isolated-on-600w-1141861556.webp" alt="">
             </div>
             <div id="aboutText">
-<<<<<<< Updated upstream
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse nulla facere dolores. Nam, enim dolore id maxime quas quisquam quia odio, porro veritatis deserunt possimus doloremque doloribus minus velit repellendus! Doloremque facere fuga nihil veniam velit maiores veritatis impedit in corrupti quod accusamus quasi cupiditate optio, dolorem sit vel maxime modi recusandae itaque. Debitis at quaerat rem porro magni voluptate aliquid eveniet esse, praesentium laborum numquam minus saepe suscipit, placeat fugit ea, ab ad ratione laudantium reiciendis reprehenderit et dignissimos similique harum! Deserunt sit non quod iusto dicta dolore praesentium, delectus necessitatibus, in fugit doloribus! Iusto nemo minima unde consequatur!
-            </div>
-            <div id="people">
-                <div id="pedagogicsGroup">
-                    <h3>Teknik och pedagogik</h3>
-=======
                 <p json="aboutText"></p>
             </div>
             <div id="people">
                 <div id="pedagogicsGroup">
                     <h3 json="pedagogicsGroup"></h3>
->>>>>>> Stashed changes
                 </div>
                 <div id="amanda">
                     <img src="static/JD-Laughing-Portrait-Square-Black-BG.jpg" alt="">
@@ -276,11 +172,7 @@
             <p>Kandidatarbete produktutveckling (18hp), Linköpings universitet</p>
         </div>
         <div id="updated">
-<<<<<<< Updated upstream
-            <p>Senast uppdaterad: 2021-05-10</p>
-=======
             <p json="updated"></p>
->>>>>>> Stashed changes
         </div>
         <div id="contact">
             <img src="" alt="Bild med mejl, för att unvika bots">
