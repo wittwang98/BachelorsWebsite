@@ -41,7 +41,7 @@
             "chair":{
                 "mainTitle":"Pedagogiska möbler",
                 "language":"English",
-                "furnitureMenu":"| TILL STARTSIDAN",
+                "startMenu":"| TILL STARTSIDAN",
                 "productHeadline":"Stol",
                 "aboutProduct":"",
                 "inShortHeadline":"",
@@ -62,7 +62,7 @@
             "desk":{
                 "mainTitle":"Pedagogiska möbler",
                 "language":"English",
-                "furnitureMenu":"| TILL STARTSIDAN",
+                "startMenu":"| TILL STARTSIDAN",
                 "productHeadline":"Bord",
                 "aboutProduct":"",
                 "inShortHeadline":"",
@@ -83,7 +83,7 @@
             "whiteboard":{
                 "mainTitle":"Pedagogiska möbler",
                 "language":"English",
-                "furnitureMenu":"| TILL STARTSIDAN",
+                "startMenu":"| TILL STARTSIDAN",
                 "productHeadline":"Tavla",
                 "aboutProduct":"",
                 "inShortHeadline":"",
@@ -104,7 +104,7 @@
             "portable":{
                 "mainTitle":"Pedagogiska möbler",
                 "language":"English",
-                "furnitureMenu":"| TILL STARTSIDAN",
+                "startMenu":"| TILL STARTSIDAN",
                 "productHeadline":"Portabel",
                 "aboutProduct":"",
                 "inShortHeadline":"",
@@ -168,7 +168,7 @@
     "chair":{
         "mainTitle":"Pedagogiska möbler",
         "language":"Svenska",
-        "furnitureMenu":"| BACK TO START",
+        "startMenu":"| BACK TO START",
         "productHeadline":"",
         "aboutProduct":"",
         "inShortHeadline":"",
@@ -188,7 +188,7 @@
     "desk":{
         "mainTitle":"Pedagogiska möbler",
         "language":"Svenska",
-        "furnitureMenu":"| BACK TO START",
+        "startMenu":"| BACK TO START",
         "productHeadline":"",
         "aboutProduct":"",
         "inShortHeadline":"",
@@ -209,7 +209,7 @@
     "whiteboard":{
         "mainTitle":"Pedagogiska möbler",
         "language":"Svenska",
-        "furnitureMenu":"| BACK TO START",
+        "startMenu":"| BACK TO START",
         "productHeadline":"",
         "aboutProduct":"",
         "inShortHeadline":"",
@@ -230,7 +230,7 @@
     "portable":{
         "mainTitle":"Pedagogiska möbler",
         "language":"Svenska",
-        "furnitureMenu":"| BACK TO START",
+        "startMenu":"| BACK TO START",
         "productHeadline":"",
         "aboutProduct":"",
         "inShortHeadline":"",

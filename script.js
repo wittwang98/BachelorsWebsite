@@ -68,7 +68,8 @@ loadAll = ()=>{
             element.innerHTML = content[lang][key]
         }
         else{
-            element.innerHTML = content[lang].keyAddon[key]
+            element.innerHTML = content.sv.chair[key]
+            //[lang].keyAddon[key]
         }
         element.style.opacity="1"
     })
