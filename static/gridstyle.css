@@ -17,6 +17,11 @@ body{
     border-radius: 5px;
     }
 
+p, h1, h2, h3{
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
 div{
     /* outline: solid 1px black; */
 }
@@ -66,6 +71,11 @@ h2{
 #language:hover{
     background-color: #dddddd55;
     color: black;
+}
+
+.expand:hover{
+    transform: scale(1.05);
+    transition: 200ms;
 }
 
 .header{
@@ -135,6 +145,7 @@ h2{
     min-height: 1fr;
     display: grid;
     align-content: center;
+    background-color: #dddddd77;
 }
 
 #logo > a> img{
@@ -282,11 +293,6 @@ h2{
 #reports > div > img{
     max-width: 100%;
     max-height: 100%;
-}
-
-#projectReport:hover, #pedagogicsReport:hover, #designReport:hover, #circularityReport:hover{
-    cursor: pointer;
-    background-color: lightgray;
 }
 
 #reportsHeadline{
