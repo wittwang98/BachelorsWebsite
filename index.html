@@ -4,42 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="static/gridstyle.css"/>
-    <title json="mainTitle">Pedagogiska möbler</title>
+    <title json="mainTitle"></title>
 </head>
 <body>
     <div class="header">
-        <div id="language" > <img jsonImage="languageImage" src="static/united-kingdom.png" alt="" height="30px"><p json="language">English</p></div>
+        <div id="language" > <img jsonImage="languageImage" src="" alt="" height="30px"><p json="language"></p></div>
         <img id="backgroundImage" src="static/temp_header.jpg" alt="">
         <div id="backgroundImageBlur"></div>
         <div id="logo">
-            <a href="#"><img jsonImage="logo" src="static/Hivemind.png" alt=""></a>
+            <a id="logoImage" href="#"><img jsonImage="logo" src="" alt=""></a>
         </div>
         <div id="menu">
             <p>
-                <a href="#project" json="projectMenu">| PROJEKTET</a>
+                <a href="#project" json="projectMenu"></a>
             </p>
             <p>
-                <a href="#furniture" json="furnitureMenu">| PEDAGOGISKA MÖBLER</a>
+                <a href="#furniture" json="furnitureMenu"></a>
             </p>
             <p>
-                <a href="#reports" json="reportsMenu">| RAPPORTER</a>
+                <a href="#reports" json="reportsMenu"></a>
             </p>
             <p>
-                <a href="#about" json="aboutMenu">| OM OSS</a>
+                <a href="#about" json="aboutMenu"></a>
             </p>
 
         </div>
     </div>
     <div class="content">
         <div id="project" class="boxshadow">
-            <h1 id="projectHeader" json="projectHeader">Projektet</h1>
+            <h1 id="projectHeader" json="projectHeader"></h1>
             <div id="projectImage">
                 <h2 json="cardHeadline">
-                    Uppdraget
+                    
                 </h2>
                 <img json="cardImage" src="static/Hivemind classroom.PNG" alt="">
             </div>
-            <p id="projectText" json="projectText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iure magnam aut nemo, totam iste quos laboriosam, impedit, officiis sequi voluptates ipsa error quae eos aperiam distinctio corrupti quis nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere dolore quod velit inventore libero rem quo delectus optio sint asperiores nemo sit a illum voluptatem quam vitae, debitis illo.</p>
+            <p id="projectText" json="projectText"></p>
             <div id="projectNavigation">
                 <div id="projectNavigation1"></div>
                 <div id="projectNavigation2"></div>
@@ -51,81 +51,81 @@
         </div>
         <div id="furniture" class="boxshadow">
             <div id="furnitureHeadline">
-                <h1 json="furnitureHeadline">Pedagogiska möbler</h1>
+                <h1 json="furnitureHeadline"></h1>
             </div>
-            <div id="chair">
-                <h2 class="clickable" json="chairHeadline">Stolen</h2>
+            <div onclick='toPage("/products.html", "chair")' id="chair">
+                <h2 class="clickable" json="chairHeadline"></h2>
                 <img class="clickable expand" src="static/NetChair 2.png" alt="">
-                <p json="chairText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable" json="button">Läs mer</div>
+                <p json="chairText"></p>
+                <div class="button clickable" json="button"></div>
             </div>
-            <div id="desk">
-                <h2 class="clickable" json="deskHeadline">Skrivbordet</h2>
+            <div onclick='toPage("/products.html", "desk")' id="desk">
+                <h2 class="clickable" json="deskHeadline"></h2>
                 <img class="clickable expand" src="static/NetChair 2.png" alt="">
-                <p json="deskText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable" json="button">Läs mer</div>
+                <p json="deskText"></p>
+                <div class="button clickable" json="button"></div>
             </div>
-            <div id="whiteboard">
-                <h2 class="clickable" json="whiteboardHeadline">Whiteboard</h2>
+            <div onclick='toPage("/products.html", "whiteboard")' id="whiteboard">
+                <h2 class="clickable" json="whiteboardHeadline"></h2>
                 <img class="clickable expand" src="static/NetChair 2.png" alt="">
-                <p json="whiteboardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable" json="button">Läs mer</div>
+                <p json="whiteboardText"></p>
+                <div class="button clickable" json="button"></div>
             </div>
-            <div id="portable">
-                <h2 class="clickable" json="portableHeadline">Portabel möbel</h2>
+            <div onclick='toPage("/products.html", "portable")' id="portable">
+                <h2 class="clickable" json="portableHeadline"></h2>
                 <img class="clickable expand" src="static/NetChair 2.png" alt="">
-                <p json="portableText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable" json="button">Läs mer</div>
+                <p json="portableText"></p>
+                <div class="button clickable" json="button"></div>
             </div>
         </div>
         <div id="reports" class="boxshadow">
             <div id="reportsHeadline">
-                <h1 json="reportsHeadline">Rapporter</h1>
+                <h1 json="reportsHeadline"></h1>
             </div>
-            <div id="projectReport">
-                <h2 class="clickable" json="projectReportHeadline">Projektrapport</h2>
+            <div onclick='toPage("/products.html", "projectReport")' id="projectReport">
+                <h2 class="clickable" json="projectReportHeadline"></h2>
                 <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
-                <p json="projectReportText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div class="button clickable" json="button">Läs mer</div>
-            </div>
-
-            <div id="pedagogicsReport">
-                <h2 json="pedagogicsReportHeadline" class="clickable">Teknik och pedagogik</h2>
-                <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
-                <p json="pedagogicsReportText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div json="button" class="button clickable">Läs mer</div>
+                <p json="projectReportText"></p>
+                <div class="button clickable" json="button"></div>
             </div>
 
-            <div id="designReport">
-                <h2 json="designReportHeadline" class="clickable">Design</h2>
+            <div onclick='toPage("/products.html", "pedagogicsReport")' id="pedagogicsReport">
+                <h2 json="pedagogicsReportHeadline" class="clickable"></h2>
                 <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
-                <p json="designReportText" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div json="button" class="button clickable">Läs mer</div>
+                <p json="pedagogicsReportText"></p>
+                <div json="button" class="button clickable"></div>
             </div>
 
-            <div id="circularityReport">
-                <h2 class="clickable" json="circularityReportHeadline">Cirkularitet</h2>
+            <div onclick='toPage("/products.html", "designReport")' id="designReport">
+                <h2 json="designReportHeadline" class="clickable"></h2>
                 <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
-                <p json="circularityReporText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium officia deleniti exercitationem obcaecati quaerat! Recusandae et aliquam officiis, ea cum alias nesciunt nam explicabo aliquid non omnis quaerat minus!</p>
-                <div json="button" class="button clickable">Läs mer</div>
+                <p json="designReportText" ></p>
+                <div json="button" class="button clickable"></div>
+            </div>
+
+            <div onclick='toPage("/products.html", "circularityReport")' id="circularityReport">
+                <h2 class="clickable" json="circularityReportHeadline"></h2>
+                <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
+                <p json="circularityReporText"></p>
+                <div json="button" class="button clickable"></div>
             </div>
 
         </div>
         <div id="about" class="boxshadow">
             <div id="aboutHeadline">
                 <h1 json="aboutHeadline">
-                    Om oss
+                    
                 </h1>
             </div>
             <div id="groupPicture">
                 <img src="static/group-young-people-isolated-on-600w-1141861556.webp" alt="">
             </div>
             <div id="aboutText">
-                <p json="aboutText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse nulla facere dolores. Nam, enim dolore id maxime quas quisquam quia odio, porro veritatis deserunt possimus doloremque doloribus minus velit repellendus! Doloremque facere fuga nihil veniam velit maiores veritatis impedit in corrupti quod accusamus quasi cupiditate optio, dolorem sit vel maxime modi recusandae itaque. Debitis at quaerat rem porro magni voluptate aliquid eveniet esse, praesentium laborum numquam minus saepe suscipit, placeat fugit ea, ab ad ratione laudantium reiciendis reprehenderit et dignissimos similique harum! Deserunt sit non quod iusto dicta dolore praesentium, delectus necessitatibus, in fugit doloribus! Iusto nemo minima unde consequatur!</p>
+                <p json="aboutText"></p>
             </div>
             <div id="people">
                 <div id="pedagogicsGroup">
-                    <h3 json="pedagogicsGroup">Teknik och pedagogik</h3>
+                    <h3 json="pedagogicsGroup"></h3>
                 </div>
                 <div id="amanda">
                     <img src="static/JD-Laughing-Portrait-Square-Black-BG.jpg" alt="">
@@ -138,7 +138,7 @@
                     <p class="linktext">Länk till Linkedin</p>
                 </div>
                 <div id="designGroup">
-                    <h3 json="designGroup">Design</h3>
+                    <h3 json="designGroup"></h3>
                 </div>
                 <div id="harald">
                     <img src="static/JD-Laughing-Portrait-Square-Black-BG.jpg" alt="">
@@ -151,7 +151,7 @@
                     <p class="linktext">Länk till Linkedin</p>
                 </div>
                 <div id="circularityGroup">
-                    <h3 json="circularityGroup">Cirkularitet</h3>
+                    <h3 json="circularityGroup"></h3>
                 </div>
                 <div id="annika">
                     <img src="static/JD-Laughing-Portrait-Square-Black-BG.jpg" alt="">
@@ -172,7 +172,7 @@
             <p>Kandidatarbete produktutveckling (18hp), Linköpings universitet</p>
         </div>
         <div id="updated">
-            <p json="updated">Senast uppdaterad: 2021-05-10</p>
+            <p json="updated"></p>
         </div>
         <div id="contact">
             <img jsonImage="contactImage" id="contactImage" src="" alt="Bild med mejl, för att unvika bots">

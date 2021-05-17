@@ -1,6 +1,9 @@
 var lang = "sv"
 var swapable = document.querySelectorAll('[json]')
+var swapableImages = document.querySelectorAll('[jsonImage]')
 var keyAddon = ""
+
+console.log(swapable)
 
 updateLanguage = () =>{
     
@@ -14,77 +17,57 @@ updateLanguage = () =>{
     loadAll()
 }
 
-startPageButtons = () =>{
-    document.getElementById("chair").addEventListener("click", toChair)
-    document.getElementById("desk").addEventListener("click", toDesk)
-    document.getElementById("whiteboard").addEventListener("click", toWhiteboard)
-    document.getElementById("portable").addEventListener("click", toPortable)
-    document.getElementById("projectReport").addEventListener("click", toProject)
-    document.getElementById("pedagogicsReport").addEventListener("click", toPedagogics)
-    document.getElementById("designReport").addEventListener("click", toDesign)
-    document.getElementById("circularityReport").addEventListener("click", toCircularity)
+const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+  }
+
+toPage = (address, keyAddonValue) =>{
+    window.localStorage.setItem("keyAddon", keyAddonValue)
+    keyAddon = window.localStorage.getItem("keyAddon")
+
+    window.location.href=address
 }
 
-toChair = () =>{
-    window.localStorage.setItem("keyAddon", "chair")
-    window.location.href="/products.html"
-}
-toDesk = () =>{
-    window.localStorage.setItem("keyAddon", "desk")
-    window.location.href="/products.html"
-}
-toWhiteboard = () =>{
-    window.localStorage.setItem("keyAddon", "whiteboard")
-    window.location.href="/products.html"
-}
-toPortable = () =>{
-    window.localStorage.setItem("keyAddon", "portable")
-    window.location.href="/products.html"
-}
-toProject = () =>{
-    window.localStorage.setItem("keyAddon", "projectReport")
-    window.location.href="/reports.html"
-}
-toPedagogics = () =>{
-    window.localStorage.setItem("keyAddon", "pedagogicsReport")
-    window.location.href="/reports.html"
-}
-toDesign = () =>{
-    window.localStorage.setItem("keyAddon", "designReport")
-    window.location.href="/reports.html"
-}
-toCircularity = () =>{
-    window.localStorage.setItem("keyAddon", "circularityReport")
-    window.location.href="/reports.html"
+toReport = (report) =>{
+    var address = content[lang][report]["link"]
+    window.location.href=address
 }
 
 loadAll = ()=>{
     swapable.forEach(element => {
         key = element.getAttribute("json")
-        //console.log(key)
-        //console.log(keyAddon)
-
-        if (keyAddon == null){
+        console.log(key)
+        if (keyAddon == ""){
             element.innerHTML = content[lang][key]
         }
         else{
-            element.innerHTML = content.sv.chair[key]
-            //[lang].keyAddon[key]
+            element.innerHTML = content[lang][keyAddon][key]
         }
         element.style.opacity="1"
     })
 
-    var image = document.querySelector('[jsonImage="languageImage"]')
+    swapableImages.forEach(element => {
+        console.log(element)
+        key = element.getAttribute("jsonImage")
+        console.log(key)
+        if (keyAddon == ""){
+            element.src = content[lang][key]
+        }
+        else{
+            element.src = content[lang][keyAddon][key]
+        }
+        element.style.opacity="1"
+    })
+    
+   /* var image = document.querySelector('[jsonImage="languageImage"]')
     image.src = content[lang]["languageImage"]
     image.style.opacity="1"
-
     image = document.querySelector('[jsonImage="logo"]')
     image.src = content[lang]["logo"]
     image.style.opacity="1"
-
     image = document.querySelector('[jsonImage="contactImage"]')
     image.src = content[lang]["contactImage"]
-    image.style.opacity="1"
+    image.style.opacity="1" */
 }
 
 start = async ()=>{
@@ -94,10 +77,10 @@ start = async ()=>{
     if ((new URL(window.location.href).pathname) == "/"){
         window.localStorage.setItem("keyAddon", "")
         console.log(window.localStorage.getItem("keyAddon"))
-        startPageButtons()
     }
     
-    keyAddon = window.localStorage.getItem(keyAddon)
+    keyAddon = window.localStorage.getItem("keyAddon")
+
     console.log(keyAddon)
 
     if (window.localStorage.getItem("lang") === null){    
@@ -110,6 +93,8 @@ start = async ()=>{
     loadAll()
 
     document.getElementById("language").addEventListener("click", updateLanguage)
+
+    //card swap function if there's time
 
 }
 
