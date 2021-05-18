@@ -145,6 +145,7 @@
             "reportHeadline":"Projektrapport",
             "abstractHeadline":"Inledning",
             "abstract":"",
+            "link":"",
             "linkText":"Till rapporten (PDF)",
             "authorHeadline":"Författarna",
             "firstAuthor":"Arvid, Amanda, Alma, Annika, Agnes, Harald",
@@ -165,6 +166,7 @@
             "reportHeadline":"Teknik och pedagogik",
             "abstractHeadline":"Inledning",
             "abstract":"",
+            "link":"",
             "linkText":"Till rapporten (PDF)",
             "authorHeadline":"Författarna",
             "firstAuthor":"Arvid Wittwång",
@@ -183,6 +185,7 @@
             "reportHeadline":"Design",
             "abstractHeadline":"Inledning",
             "abstract":"",
+            "link":"",
             "linkText":"Till rapporten (PDF)",
             "authorHeadline":"Författarna",
             "firstAuthor":"Agnes Wide",
@@ -201,6 +204,7 @@
             "reportHeadline":"Cirkularitet",
             "abstractHeadline":"Inledning",
             "abstract":"",
+            "link":"",
             "linkText":"Till rapporten (PDF)",
             "authorHeadline":"Författarna",
             "firstAuthor":"Annika Racki",
@@ -251,7 +255,7 @@
         "circularityGroup":"",
         "updated":"",
         "languageImage":"/static/sweden.png",
-        "logo":"",
+        "logo":"/static/logo.png",
         "contactImage":"",
 
         "chair":{
@@ -276,7 +280,7 @@
             "criteriasText":"",
             "updated":"2021-05-16",
             "languageImage":"/static/sweden.png",
-            "logo":"",
+            "logo":"/static/logo.png",
             "contactImage":""
         },
         "desk":{
@@ -301,7 +305,7 @@
             "criteriasText":"",
             "updated":"2021-05-16",
             "languageImage":"/static/sweden.png",
-            "logo":"",
+            "logo":"/static/logo.png",
             "contactImage":""
         },
         "whiteboard":{
@@ -326,7 +330,7 @@
             "criteriasText":"",
             "updated":"2021-05-16",
             "languageImage":"/static/sweden.png",
-            "logo":"",
+            "logo":"/static/logo.png",
             "contactImage":""
         },
         "portable":{
@@ -351,7 +355,7 @@
             "criteriasText":"",
             "updated":"2021-05-16",
             "languageImage":"/static/sweden.png",
-            "logo":"",
+            "logo":"/static/logo.png",
             "contactImage":""
         },
         "projectReport":{
@@ -361,6 +365,7 @@
             "reportHeadline":"Project report",
             "abstractHeadline":"Inledning",
             "abstract":"",
+            "link":"",
             "linkText":"Till rapporten (PDF)",
             "authorHeadline":"Författarna",
             "firstAuthor":"Arvid, Amanda, Alma, Annika, Agnes, Harald",
@@ -369,7 +374,7 @@
             "commentText":"",
             "updated":"2021-05-16",
             "languageImage":"/static/sweden.png",
-            "logo":"",
+            "logo":"/static/logo.png",
             "contactImage":""
         },
         "pedagogicsReport":{
@@ -379,6 +384,7 @@
             "reportHeadline":"Technology and pedagogics",
             "abstractHeadline":"Inledning",
             "abstract":"",
+            "link":"",
             "linkText":"Till rapporten (PDF)",
             "authorHeadline":"Författarna",
             "firstAuthor":"Arvid Wittwång",
@@ -387,7 +393,7 @@
             "commentText":"",
             "updated":"2021-05-16",
             "languageImage":"/static/sweden.png",
-            "logo":"",
+            "logo":"/static/logo.png",
             "contactImage":""
         },
         "designReport":{
@@ -397,6 +403,7 @@
             "reportHeadline":"Design",
             "abstractHeadline":"Inledning",
             "abstract":"",
+            "link":"https://www.blocket.se/",
             "linkText":"Till rapporten (PDF)",
             "authorHeadline":"Författarna",
             "firstAuthor":"Agnes Wide",
@@ -405,7 +412,7 @@
             "commentText":"",
             "updated":"2021-05-16",
             "languageImage":"/static/sweden.png",
-            "logo":"",
+            "logo":"/static/logo.png",
             "contactImage":""
         },
         "circularityReport":{
@@ -415,6 +422,7 @@
             "reportHeadline":"Projektrapport",
             "abstractHeadline":"Inledning",
             "abstract":"",
+            "link":"",
             "linkText":"Till rapporten (PDF)",
             "authorHeadline":"Författarna",
             "firstAuthor":"Annika Racki",
@@ -423,7 +431,7 @@
             "commentText":"",
             "updated":"2021-05-16",
             "languageImage":"/static/sweden.png",
-            "logo":"",
+            "logo":"/static/logo.png",
             "contactImage":""
         }
     }

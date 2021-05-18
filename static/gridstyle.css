@@ -28,8 +28,8 @@ div{
 
 p{
     text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .button{
@@ -103,7 +103,7 @@ h2{
     height: 70vh;
     top: 0px;
     left: 0px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
 }
 
 #menu {
@@ -363,6 +363,7 @@ h2{
 #people > div >img{
     border-radius: 100%;
     max-width: 100%;
+    width: 100%;
     max-height: 100%;
 }
 
@@ -714,7 +715,9 @@ h2{
     }
     
     #people{
-        column-gap: 30px;
+        /* column-gap: 10px; */
+        width: 100%;
+        column-gap: 10px;
         text-align: center;
         display: grid;
         grid-area: people;
@@ -723,6 +726,14 @@ h2{
         grid-template-areas: 
             " pedagogicsGroup pedagogicsGroup designGroup designGroup circularityGroup circularityGroup"
             "amanda arvid harald agnes annika alma";
+    }
+
+    #people > div{
+        box-sizing: border-box;
+        width: 100%;
+    }
+    #people > div > h3, #people > div > p {
+        font-size: 15px;
     }
 
     #footer{

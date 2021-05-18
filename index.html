@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/static/favicon.png"/>
     <link rel="stylesheet" href="static/gridstyle.css"/>
     <title json="mainTitle"></title>
 </head>
 <body>
     <div class="header">
         <div id="language" > <img jsonImage="languageImage" src="" alt="" height="30px"><p json="language"></p></div>
-        <img id="backgroundImage" src="static/temp_header.jpg" alt="">
+        <img id="backgroundImage" src="static/background.png" alt="">
         <div id="backgroundImageBlur"></div>
-        <div id="logo">
+        <div id="logo" class="boxshadow">
             <a id="logoImage" href="#"><img jsonImage="logo" src="" alt=""></a>
         </div>
-        <div id="menu">
+        <div id="menu" class="boxshadow">
             <p>
                 <a href="#project" json="projectMenu"></a>
             </p>
@@ -54,25 +55,25 @@
                 <h1 json="furnitureHeadline"></h1>
             </div>
             <div onclick='toPage("/products.html", "chair")' id="chair">
-                <h2 class="clickable" json="chairHeadline"></h2>
+                <h3 class="clickable" json="chairHeadline"></h3>
                 <img class="clickable expand" src="static/NetChair 2.png" alt="">
                 <p json="chairText"></p>
                 <div class="button clickable" json="button"></div>
             </div>
             <div onclick='toPage("/products.html", "desk")' id="desk">
-                <h2 class="clickable" json="deskHeadline"></h2>
-                <img class="clickable expand" src="static/NetChair 2.png" alt="">
+                <h3 class="clickable" json="deskHeadline"></h3>
+                <img class="clickable expand" src="static/table.png" alt="">
                 <p json="deskText"></p>
                 <div class="button clickable" json="button"></div>
             </div>
             <div onclick='toPage("/products.html", "whiteboard")' id="whiteboard">
-                <h2 class="clickable" json="whiteboardHeadline"></h2>
+                <h3 class="clickable" json="whiteboardHeadline"></h3>
                 <img class="clickable expand" src="static/NetChair 2.png" alt="">
                 <p json="whiteboardText"></p>
                 <div class="button clickable" json="button"></div>
             </div>
             <div onclick='toPage("/products.html", "portable")' id="portable">
-                <h2 class="clickable" json="portableHeadline"></h2>
+                <h3 class="clickable" json="portableHeadline"></h3>
                 <img class="clickable expand" src="static/NetChair 2.png" alt="">
                 <p json="portableText"></p>
                 <div class="button clickable" json="button"></div>
@@ -82,29 +83,29 @@
             <div id="reportsHeadline">
                 <h1 json="reportsHeadline"></h1>
             </div>
-            <div onclick='toPage("/products.html", "projectReport")' id="projectReport">
-                <h2 class="clickable" json="projectReportHeadline"></h2>
+            <div onclick='toPage("/reports.html", "projectReport")' id="projectReport">
+                <h3 class="clickable" json="projectReportHeadline"></h3>
                 <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
                 <p json="projectReportText"></p>
                 <div class="button clickable" json="button"></div>
             </div>
 
-            <div onclick='toPage("/products.html", "pedagogicsReport")' id="pedagogicsReport">
-                <h2 json="pedagogicsReportHeadline" class="clickable"></h2>
+            <div onclick='toPage("/reports.html", "pedagogicsReport")' id="pedagogicsReport">
+                <h3 json="pedagogicsReportHeadline" class="clickable"></h3>
                 <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
                 <p json="pedagogicsReportText"></p>
                 <div json="button" class="button clickable"></div>
             </div>
 
-            <div onclick='toPage("/products.html", "designReport")' id="designReport">
-                <h2 json="designReportHeadline" class="clickable"></h2>
+            <div onclick='toPage("/reports.html", "designReport")' id="designReport">
+                <h3 json="designReportHeadline" class="clickable"></h3>
                 <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
                 <p json="designReportText" ></p>
                 <div json="button" class="button clickable"></div>
             </div>
 
-            <div onclick='toPage("/products.html", "circularityReport")' id="circularityReport">
-                <h2 class="clickable" json="circularityReportHeadline"></h2>
+            <div onclick='toPage("/reports.html", "circularityReport")' id="circularityReport">
+                <h3 class="clickable" json="circularityReportHeadline"></h3>
                 <img class="clickable expand" src="static/position-papers.thumb.800.480.jpg" alt="">
                 <p json="circularityReporText"></p>
                 <div json="button" class="button clickable"></div>
@@ -181,4 +182,3 @@
     <script rel="script" src="script.js"></script>
 </body>
 </html>
-

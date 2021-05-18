@@ -28,9 +28,9 @@ toPage = (address, keyAddonValue) =>{
     window.location.href=address
 }
 
-toReport = (report) =>{
-    var address = content[lang][report]["link"]
-    window.location.href=address
+toExternal = () =>{
+
+    window.open(content[lang][window.localStorage.getItem("keyAddon")]["link"],'_blank') 
 }
 
 loadAll = ()=>{
@@ -58,16 +58,6 @@ loadAll = ()=>{
         }
         element.style.opacity="1"
     })
-    
-   /* var image = document.querySelector('[jsonImage="languageImage"]')
-    image.src = content[lang]["languageImage"]
-    image.style.opacity="1"
-    image = document.querySelector('[jsonImage="logo"]')
-    image.src = content[lang]["logo"]
-    image.style.opacity="1"
-    image = document.querySelector('[jsonImage="contactImage"]')
-    image.src = content[lang]["contactImage"]
-    image.style.opacity="1" */
 }
 
 start = async ()=>{
