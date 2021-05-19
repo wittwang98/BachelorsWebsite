@@ -80,7 +80,8 @@ h2{
     row-gap: 10px;
     grid-template-columns: 10px 1fr 10px;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: ". . ."
+    grid-template-areas: 
+    ". . ."
     ". logo ."
     ". menu ."
     ". . .";
@@ -197,6 +198,7 @@ h2{
 
 #projectImage{
     grid-area: projectImage;
+    margin-top: 0px;
 }
 
 #projectImage > h2{
@@ -204,6 +206,7 @@ h2{
 }
 
 #projectText{
+    padding-top: 10px;
     grid-area: projectText;
 }
 
@@ -238,10 +241,10 @@ h2{
     grid-template-rows: repeat(5, min-content);
     grid-template-areas: 
         ". furnitureHeadline ."
-        ". chair ."
         ". desk ."
+        ". chair ."
         ". whiteboard ."
-        ". portable .";
+        ". camera .";
 }
 
 #furniture > div{
@@ -270,8 +273,8 @@ h2{
     grid-area: whiteboard;
 }
 
-#portable{
-    grid-area: portable;
+#camera{
+    grid-area: camera;
 }
 
 #reports{
@@ -376,7 +379,7 @@ h2{
 
 #groupPicture{
     grid-area: groupPicture;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 #groupPicture > img{
@@ -386,7 +389,7 @@ h2{
 
 #aboutText{
     grid-area: aboutText;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .linktext{
@@ -482,6 +485,7 @@ h2{
     margin-top: var(--upperCardMargin);
     grid-area: presentation;
     display:grid;
+    padding: var(--cardPadding);
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, min-content);
     grid-template-areas:
@@ -499,6 +503,7 @@ h2{
     grid-area: productHeadline;
 }
 #classroomProductPicture{
+    margin-top: 20px;
     grid-area: classroomProductPicture;
 }
 #aboutProduct{
@@ -512,6 +517,7 @@ h2{
     grid-area: productGallery;
     background-color: white;
     row-gap: 20px;
+    padding: var(--cardPadding);
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
@@ -613,7 +619,7 @@ h2{
 #aboutAuthors > div > img{
     max-width: 100%;
     max-height: 100%;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
 }
 
 #authorHeadline{
@@ -687,10 +693,10 @@ h2{
         row-gap: 0px;
         grid-template-areas: 
             "furnitureHeadline  furnitureHeadline furnitureHeadline furnitureHeadline"
-            "chair desk whiteboard portable"
-            "chair desk whiteboard portable"
-            "chair desk whiteboard portable"
-            "chair desk whiteboard portable";
+            "desk chair whiteboard camera"
+            "desk chair whiteboard camera"
+            "desk chair whiteboard camera"
+            "desk chair whiteboard camera";
     }
 
     #reports{
