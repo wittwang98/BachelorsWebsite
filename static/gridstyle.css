@@ -28,8 +28,6 @@ div{
 
 p{
     text-align: left;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .button{
@@ -168,6 +166,7 @@ h2{
 
 #project{
     margin-top: var(--upperCardMargin);
+    column-gap: 20px;
     grid-area: project;
     display: grid;
     grid-template-columns: 10px 1fr 10px;
@@ -188,6 +187,7 @@ h2{
 }
 
 #about{
+    padding: var(--cardPadding);
     grid-area: about;
 }
 
@@ -232,7 +232,7 @@ h2{
 }
 
 #furniture{
-    column-gap: 10px;
+    column-gap: 15px;
     row-gap: 10px;
     background-color: white;
     grid-area: furniture;
@@ -762,19 +762,7 @@ h2{
             ". criterias criterias criterias .";
     }
 
-    #presentation{
-        padding: var(--cardPadding);
-        grid-area: presentation;
-        display:grid;
-        row-gap: 50px;
-        column-gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: min-content min-content min-content;
-        grid-template-areas:
-            "productHeadline productHeadline productHeadline"
-            "classroomProductPicture classroomProductPicture aboutProduct"
-            "inShort inShort inShort";
-    }
+  
     #productGallery{
         padding: var(--cardPadding);
         grid-area: productGallery;
